@@ -546,7 +546,9 @@
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#ejemplos">Ejemplos</a></li>
                 <li><a href="#filosofia">Filosofía</a></li>
+                <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -659,6 +661,14 @@
                     <h3>Portafolios Web</h3>
                     <p>Creación de portafolios profesionales personalizados. Diseño moderno y responsive.</p>
                     <p class="service-price">$60 - $100</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Páginas Web Personalizadas</h3>
+                    <p>Diseño de sitios web únicos para ocasiones especiales: cumpleaños, bodas, aniversarios, eventos corporativos. Con animaciones, videos y elementos interactivos.</p>
+                    <p class="service-price">$80 - $150</p>
+                    <a href="#ejemplos" style="display: inline-block; margin-top: 10px; color: var(--accent); text-decoration: underline;">Ver Ejemplo →</a>
                 </div>
 
                 <div class="service-card">
@@ -779,8 +789,65 @@
     <section class="contact" id="contacto">
         <div class="container">
             <h2 class="section-title" style="color: white;">Contáctanos</h2>
-            <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;">¿Listo para proteger tu tecnología? Estamos aquí para ayudarte</p>
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 50px;">¿Listo para proteger tu tecnología? Estamos aquí para ayudarte</p>
             
+            <!-- FORMULARIO DE CONTACTO -->
+            <div style="max-width: 600px; margin: 0 auto 50px;">
+                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <h3 style="color: var(--primary); margin-bottom: 30px; text-align: center;">Envíanos un Mensaje</h3>
+                    
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Nombre Completo *</label>
+                            <input type="text" name="nombre" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="Tu nombre">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Email *</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="tu@email.com">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Teléfono *</label>
+                            <input type="tel" name="telefono" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="+503 0000-0000">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Servicio de Interés *</label>
+                            <select name="servicio" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;">
+                                <option value="">Selecciona un servicio...</option>
+                                <option value="soporte">Soporte Técnico Integral</option>
+                                <option value="optimizacion">Optimización de Sistemas</option>
+                                <option value="seguridad">Seguridad Informática</option>
+                                <option value="respaldo">Respaldo de Datos</option>
+                                <option value="redes">Configuración de Redes</option>
+                                <option value="capacitacion">Capacitación Técnica</option>
+                                <option value="web">Portafolio Web</option>
+                                <option value="scripts">Scripts Python</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Fecha Preferida</label>
+                            <input type="date" name="fecha" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Mensaje *</label>
+                            <textarea name="mensaje" required rows="5" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; resize: vertical;" placeholder="Cuéntanos sobre tu problema o necesidad..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.2em;">Enviar Mensaje 📩</button>
+                    </form>
+
+                    <div id="formSuccess" style="display: none; background: #4CAF50; color: white; padding: 20px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                        <strong>✅ ¡Mensaje enviado exitosamente!</strong><br>
+                        Te contactaremos pronto.
+                    </div>
+                </div>
+            </div>
+
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">📱</div>
@@ -804,6 +871,184 @@
                     <div class="contact-icon">🕐</div>
                     <h3>Horario</h3>
                     <p>Lun - Vie: 8AM - 6PM<br>Sábado: 9AM - 2PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EJEMPLOS DE TRABAJO -->
+    <section style="padding: 80px 20px; background: var(--light);" id="ejemplos">
+        <div class="container">
+            <h2 class="section-title">Ejemplos de Trabajo</h2>
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 50px; color: #666;">Muestra de proyectos realizados</p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+                        <div>
+                            <h3 style="color: var(--primary); font-size: 2em; margin-bottom: 20px;">🎁 Página Sorpresa Romántica</h3>
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                                Sitio web interactivo creado para ocasión especial con:
+                            </p>
+                            <ul style="color: #666; line-height: 2; margin-bottom: 20px; list-style-position: inside;">
+                                <li>✨ Animaciones profesionales</li>
+                                <li>🔒 Sistema de contraseña</li>
+                                <li>⏰ Cuenta regresiva programada</li>
+                                <li>🎬 Integración de video</li>
+                                <li>🎉 Efectos de confeti</li>
+                                <li>📱 Diseño responsive</li>
+                            </ul>
+                            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                <a href="https://demopaginaweb.netlify.app/" target="_blank" class="btn btn-primary" style="display: inline-block;">
+                                    Ver Demo en Vivo
+                                </a>
+                                <button onclick="mostrarDetallesTecnicos()" class="btn btn-secondary">
+                                    Detalles Técnicos
+                                </button>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 0.9em; color: #999;">
+                                <strong>Nota:</strong> Esta es una página real creada para ocasión especial. Explora todas las interacciones y efectos.
+                            </p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <div style="font-size: 5em; margin-bottom: 20px;">🎁</div>
+                                <p style="color: white; font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">Experiencia Interactiva</p>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 0.9em;">Con efectos visuales y sonoros</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de detalles técnicos (oculto inicialmente) -->
+                    <div id="detalles-tecnicos" style="display: none; margin-top: 30px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
+                        <h4 style="color: var(--secondary); margin-bottom: 20px; font-size: 1.5em;">🔧 Tecnologías Utilizadas</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <div style="background: var(--light); padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary);">
+                                <strong>HTML5</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">Estructura semántica</span>
+                            </div>
+                            <div style="background: var(--light); padding: 15px; border-radius: 10px; border-left: 4px solid var(--secondary);">
+                                <strong>CSS3 + Animations</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">Efectos visuales</span>
+                            </div>
+                            <div style="background: var(--light); padding: 15px; border-radius: 10px; border-left: 4px solid var(--accent);">
+                                <strong>JavaScript</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">Interactividad avanzada</span>
+                            </div>
+                            <div style="background: var(--light); padding: 15px; border-radius: 10px; border-left: 4px solid #764ba2;">
+                                <strong>Canvas Confetti</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">Librería de efectos</span>
+                            </div>
+                            <div style="background: var(--light); padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary);">
+                                <strong>Tailwind CSS</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">Framework de estilos</span>
+                            </div>
+                            <div style="background: var(--light); padding: 15px; border-radius: 10px; border-left: 4px solid var(--secondary);">
+                                <strong>Google Fonts</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">Tipografías personalizadas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Llamado a la acción -->
+                <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 40px; border-radius: 20px; margin-top: 40px; text-align: center; color: white;">
+                    <h3 style="font-size: 2em; margin-bottom: 15px;">¿Necesitas una página web personalizada?</h3>
+                    <p style="font-size: 1.2em; margin-bottom: 25px; opacity: 0.95;">Creo sitios web únicos para cualquier ocasión especial</p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">💍 Bodas</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">🎂 Cumpleaños</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">🎓 Graduaciones</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">🎉 Aniversarios</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">🏢 Eventos</span>
+                    </div>
+                    <a href="#contacto" class="btn btn-primary" style="margin-top: 25px; background: white; color: var(--primary);">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section style="padding: 80px 20px; background: white;" id="agenda">
+        <div class="container">
+            <h2 class="section-title">Agenda tu Cita</h2>
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 50px; color: #666;">Reserva tu espacio y recibe atención personalizada</p>
+            
+            <div style="max-width: 900px; margin: 0 auto; background: var(--light); padding: 40px; border-radius: 15px; border: 2px solid var(--accent);">
+                <h3 style="color: var(--primary); text-align: center; margin-bottom: 30px;">Disponibilidad Semanal</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid var(--primary);">
+                        <h4 style="color: var(--primary); margin-bottom: 15px;">📅 Lunes - Viernes</h4>
+                        <p style="margin-bottom: 10px;"><strong>Horario:</strong> 8:00 AM - 6:00 PM</p>
+                        <p style="margin-bottom: 10px;"><strong>Servicios:</strong> Todos disponibles</p>
+                        <p style="color: #28a745; font-weight: bold;">✓ Disponible</p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary);">
+                        <h4 style="color: var(--secondary); margin-bottom: 15px;">📅 Sábados</h4>
+                        <p style="margin-bottom: 10px;"><strong>Horario:</strong> 9:00 AM - 2:00 PM</p>
+                        <p style="margin-bottom: 10px;"><strong>Servicios:</strong> Todos disponibles</p>
+                        <p style="color: #28a745; font-weight: bold;">✓ Disponible</p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #999;">
+                        <h4 style="color: #666; margin-bottom: 15px;">📅 Domingos</h4>
+                        <p style="margin-bottom: 10px;"><strong>Horario:</strong> Cerrado</p>
+                        <p style="margin-bottom: 10px;"><strong>Emergencias:</strong> Solo con cita previa</p>
+                        <p style="color: #dc3545; font-weight: bold;">✗ No disponible</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px; background: white; padding: 30px; border-radius: 10px;">
+                    <h4 style="color: var(--primary); margin-bottom: 20px; text-align: center;">🎯 Cómo Agendar tu Cita</h4>
+                    
+                    <div style="display: grid; gap: 15px;">
+                        <div style="display: flex; align-items: start; gap: 15px;">
+                            <div style="background: var(--primary); color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                            <div>
+                                <strong>Contáctanos por WhatsApp</strong>
+                                <p style="margin-top: 5px; color: #666;">Envía un mensaje al <a href="https://wa.me/50360613425" style="color: var(--secondary);">+503 6061-3425</a></p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 15px;">
+                            <div style="background: var(--secondary); color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                            <div>
+                                <strong>Indica tu servicio y fecha preferida</strong>
+                                <p style="margin-top: 5px; color: #666;">Dinos qué servicio necesitas y cuándo te gustaría recibirlo</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 15px;">
+                            <div style="background: var(--accent); color: var(--dark); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                            <div>
+                                <strong>Confirma tu cita</strong>
+                                <p style="margin-top: 5px; color: #666;">Te enviaremos confirmación con hora exacta y detalles</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 15px;">
+                            <div style="background: #28a745; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+                            <div>
+                                <strong>¡Listo!</strong>
+                                <p style="margin-top: 5px; color: #666;">Nos vemos en la fecha acordada. Recibirás recordatorio 24h antes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="https://wa.me/50360613425?text=Hola,%20quiero%20agendar%20una%20cita%20para%20servicio%20técnico" class="btn btn-primary" style="font-size: 1.2em;">
+                        📅 Agendar por WhatsApp
+                    </a>
+                </div>
+
+                <div style="margin-top: 30px; background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #ffc107;">
+                    <p style="margin: 0; color: #856404;"><strong>💡 Tip:</strong> Para servicio urgente el mismo día, llama directamente. Las citas con anticipación tienen descuento del 5%.</p>
                 </div>
             </div>
         </div>
@@ -858,6 +1103,44 @@
                 }
             });
         });
+
+        // Manejo del formulario de contacto
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Mostrar mensaje de éxito
+                const successMsg = document.getElementById('formSuccess');
+                successMsg.style.display = 'block';
+                
+                // Limpiar formulario
+                form.reset();
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+                
+                // Enviar datos por EmailJS o Formspree
+                // Si usas Formspree, descomenta la siguiente línea y agrega tu ID
+                // form.submit();
+            });
+        }
+
+        // Función para mostrar/ocultar detalles técnicos
+        function mostrarDetallesTecnicos() {
+            const detalles = document.getElementById('detalles-tecnicos');
+            if (detalles.style.display === 'none' || detalles.style.display === '') {
+                detalles.style.display = 'block';
+                detalles.style.animation = 'fadeIn 0.5s';
+            } else {
+                detalles.style.display = 'none';
+            }
+        }
+
+        // Hacer la función global
+        window.mostrarDetallesTecnicos = mostrarDetallesTecnicos;
 
         // Animación de entrada para las tarjetas
         const observerOptions = {
