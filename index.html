@@ -598,7 +598,7 @@
                     <p><strong>Formación:</strong></p>
                     <ul>
                         <li>Técnico Universitario en Ciberseguridad - ESIT (En curso)</li>
-                        <li>Técnico en Informática (Ofimática) Capacitate Para El Empleo</li>
+                        <li>Técnico en Informática (Ofimática) - Capacitate Para El Empleo</li>
                         <li>Diploma en Computación Administrativa - CDPAC</li>
                     </ul>
                 </div>
@@ -791,59 +791,79 @@
             <h2 class="section-title" style="color: white;">Contáctanos</h2>
             <p style="text-align: center; font-size: 1.2em; margin-bottom: 50px;">¿Listo para proteger tu tecnología? Estamos aquí para ayudarte</p>
             
-            <!-- FORMULARIO DE CONTACTO -->
+            <!-- FORMULARIO DE CONTACTO INTEGRADO CON GOOGLE FORMS -->
             <div style="max-width: 600px; margin: 0 auto 50px;">
                 <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                     <h3 style="color: var(--primary); margin-bottom: 30px; text-align: center;">Envíanos un Mensaje</h3>
+
                     
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <!-- Iframe oculto para capturar la respuesta de Google sin recargar -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {mostrarMensajeExito();}"></iframe>
+
+                    <!-- 
+                        ¡FORMULARIO ACTUALIZADO!
+                        1. 'action' ha sido reemplazado con la URL correcta y terminado en /formResponse.
+                        2. Los 'name' de los inputs han sido reemplazados con los 'entry.XXXXXX' extraídos.
+                    -->
+                    <form id="contactForm" 
+                          action="https://docs.google.com/forms/d/e/1FAIpQLSdYoefapwl6Sa4v9C3S4D5j2gCvliaxMBJKjRB8LtOu14uowg/formResponse" 
+                          method="POST" 
+                          target="hidden_iframe" 
+                          onsubmit="submitted=true;">
+                          
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Nombre Completo *</label>
-                            <input type="text" name="nombre" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="Tu nombre">
+                            <!-- ID de Nombre: 1764812634 -->
+                            <input type="text" name="entry.1764812634" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="Tu nombre">
                         </div>
 
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Email *</label>
-                            <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="tu@email.com">
+                            <!-- ID de Email: 573503571 -->
+                            <input type="email" name="entry.573503571" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="tu@email.com">
                         </div>
 
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Teléfono *</label>
-                            <input type="tel" name="telefono" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="+503 0000-0000">
+                            <!-- ID de Teléfono: 842481777 -->
+                            <input type="tel" name="entry.842481777" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;" placeholder="+503 0000-0000">
                         </div>
 
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Servicio de Interés *</label>
-                            <select name="servicio" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;">
+                            <!-- ID de Servicio: 201744744 -->
+                            <select name="entry.201744744" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;">
                                 <option value="">Selecciona un servicio...</option>
-                                <option value="soporte">Soporte Técnico Integral</option>
-                                <option value="optimizacion">Optimización de Sistemas</option>
-                                <option value="seguridad">Seguridad Informática</option>
-                                <option value="respaldo">Respaldo de Datos</option>
-                                <option value="redes">Configuración de Redes</option>
-                                <option value="capacitacion">Capacitación Técnica</option>
-                                <option value="web">Portafolio Web</option>
-                                <option value="scripts">Scripts Python</option>
-                                <option value="otro">Otro</option>
+                                <option value="Soporte Técnico Integral">Soporte Técnico Integral</option>
+                                <option value="Optimización de Sistemas">Optimización de Sistemas</option>
+                                <option value="Seguridad Informática">Seguridad Informática</option>
+                                <option value="Respaldo de Datos">Respaldo de Datos</option>
+                                <option value="Configuración de Redes">Configuración de Redes</option>
+                                <option value="Capacitación Técnica">Capacitación Técnica</option>
+                                <option value="Portafolio Web">Portafolio Web</option>
+                                <option value="Scripts Python">Scripts Python</option>
+                                <option value="Otro">Otro</option>
                             </select>
                         </div>
 
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Fecha Preferida</label>
-                            <input type="date" name="fecha" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;">
+                            <!-- ID de Fecha: 1041342100 -->
+                            <input type="date" name="entry.1041342100" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em;">
                         </div>
 
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600;">Mensaje *</label>
-                            <textarea name="mensaje" required rows="5" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; resize: vertical;" placeholder="Cuéntanos sobre tu problema o necesidad..."></textarea>
+                            <!-- ID de Mensaje: 736995783 -->
+                            <textarea name="entry.736995783" required rows="5" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; resize: vertical;" placeholder="Cuéntanos sobre tu problema o necesidad..."></textarea>
                         </div>
-
+                        
                         <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.2em;">Enviar Mensaje 📩</button>
                     </form>
 
                     <div id="formSuccess" style="display: none; background: #4CAF50; color: white; padding: 20px; border-radius: 8px; margin-top: 20px; text-align: center;">
                         <strong>✅ ¡Mensaje enviado exitosamente!</strong><br>
-                        Te contactaremos pronto.
+                        Tus datos se han guardado de forma segura. Te contactaremos pronto.
                     </div>
                 </div>
             </div>
@@ -1078,6 +1098,10 @@
     </a>
 
     <script>
+        // VARIABLE GLOBAL CORREGIDA
+        // Se declara la variable 'submitted' globalmente para que el iframe pueda acceder a ella.
+        let submitted = false;
+
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
@@ -1104,28 +1128,28 @@
             });
         });
 
-        // Manejo del formulario de contacto
-        const form = document.getElementById('contactForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Mostrar mensaje de éxito
-                const successMsg = document.getElementById('formSuccess');
-                successMsg.style.display = 'block';
-                
-                // Limpiar formulario
-                form.reset();
-                
-                // Ocultar mensaje después de 5 segundos
-                setTimeout(() => {
-                    successMsg.style.display = 'none';
-                }, 5000);
-                
-                // Enviar datos por EmailJS o Formspree
-                // Si usas Formspree, descomenta la siguiente línea y agrega tu ID
-                // form.submit();
-            });
+        // Manejo de la notificación de éxito (Google Forms)
+        function mostrarMensajeExito() {
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('formSuccess');
+            
+            // Ocultar el formulario
+            // form.style.display = 'none'; // Descomenta esto si prefieres que el formulario desaparezca
+            
+            // Mostrar mensaje
+            successMsg.style.display = 'block';
+            
+            // Resetear el formulario
+            form.reset();
+            
+            // Quitar mensaje después de 5 segundos
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+                // form.style.display = 'block'; // Volver a mostrar formulario si se ocultó
+            }, 5000);
+            
+            // Reiniciar variable
+            submitted = false;
         }
 
         // Función para mostrar/ocultar detalles técnicos
